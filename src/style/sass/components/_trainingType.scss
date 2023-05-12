@@ -1,0 +1,47 @@
+.radar-chart {
+  position: relative;
+  width: 30%;
+  height: 263px;
+  background: #282d30;
+  border-radius: 5px;
+}
+
+.recharts-polar-angle-axis-tick:nth-child(1) {
+  transform: translateY(-5px);
+}
+.recharts-polar-angle-axis-tick:nth-child(2) {
+  // transform: translateY(-5px);
+}
+.recharts-polar-angle-axis-tick:nth-child(3) {
+  transform: translateY(5px);
+}
+.recharts-polar-angle-axis-tick:nth-child(4) {
+  transform: translateY(10px);
+}
+.recharts-polar-angle-axis-tick:nth-child(5) {
+  transform: translateY(5px);
+}
+.recharts-polar-angle-axis-tick:nth-child(6) {
+  // transform: translateY(-5px);
+}
+
+@include md {
+  .recharts-polar-angle-axis-tick:nth-child(1) {
+    transform: translateY(-10px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(2) {
+    transform: translateY(-10px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(3) {
+    transform: translate(-8px, 15px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(4) {
+    transform: translateY(15px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(5) {
+    transform: translateY(15px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(6) {
+    transform: translateY(-10px);
+  }
+}

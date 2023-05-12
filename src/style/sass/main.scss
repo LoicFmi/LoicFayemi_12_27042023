@@ -1,6 +1,14 @@
+@import './utils/mixins';
+
 @import './base/typography';
 
 @import './components/header';
 @import './components/sidebar';
+@import './components/userName';
+@import './components/dailyActivity';
+@import './components/averageSessionLength';
+@import './components/trainingType';
+@import './components/score';
+@import './components/keyDatas';
 
 @import './pages/user';

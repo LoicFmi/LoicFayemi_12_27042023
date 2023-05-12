@@ -1,0 +1,14 @@
+.user-name {
+  margin-bottom: 77px;
+  &__title {
+    font-size: 48px;
+    margin-left: -2px;
+    & span {
+      color: #ff0101;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,30 @@
+.average-session-length {
+  position: relative;
+  width: 30%;
+  height: 263px;
+  display: flex;
+  flex-direction: column;
+  background: #ff0000;
+  border-radius: 5px;
+  &__title {
+    position: absolute;
+    font-size: 15px;
+    padding: 29px 34px 0 34px;
+    color: rgba(255, 255, 255, 0.5);
+    width: 150px;
+  }
+}
+
+.average-session-length-tooltip {
+  background-color: white;
+  width: 39px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__value {
+    color: black;
+    font-size: 8px;
+  }
+}

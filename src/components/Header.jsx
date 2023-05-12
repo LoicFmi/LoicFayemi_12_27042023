@@ -12,7 +12,7 @@ export default function Header() {
         width={178}
       ></img>
       <nav className="header__nav">
-        <Link className="nav-link" to="/">
+        <Link className="nav-link" to="/user/12">
           Accueil
         </Link>
         <Link className="nav-link" to="#">

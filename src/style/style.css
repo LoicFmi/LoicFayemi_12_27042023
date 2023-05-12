@@ -39,7 +39,7 @@ main {
   margin-bottom: 59px;
   background-color: black;
   width: 117px;
-  height: 1024px;
+  height: 1040px;
 }
 .sidebar__nav {
   display: flex;
@@ -59,6 +59,272 @@ main {
   color: white;
   font-size: 12px;
   transform: rotate(270deg);
+}
+
+.user-name {
+  margin-bottom: 77px;
+}
+.user-name__title {
+  font-size: 48px;
+  margin-left: -2px;
+}
+.user-name__title span {
+  color: #ff0101;
+}
+.user-name__text {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.daily-activity {
+  width: 70%;
+  background-color: #fbfbfb;
+  padding: 24px 26px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+@media (max-width: 1439px) {
+  .daily-activity {
+    width: 100%;
+  }
+}
+.daily-activity__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+.daily-activity__header h2 {
+  font-size: 15px;
+}
+.daily-activity__header__legend {
+  display: flex;
+}
+.daily-activity__header__legend__item {
+  display: flex;
+  margin-right: 25px;
+  margin-left: 32px;
+}
+.daily-activity__header__legend__item img {
+  width: 8px;
+  margin-right: 10px;
+}
+.daily-activity__header__legend__item p {
+  color: #74798c;
+  font-size: 14px;
+}
+
+.daily-activity-tooltip {
+  background-color: #e60000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 63px;
+}
+.daily-activity-tooltip__value {
+  color: white;
+  font-size: 7px;
+}
+
+.average-session-length {
+  position: relative;
+  width: 30%;
+  height: 263px;
+  display: flex;
+  flex-direction: column;
+  background: #ff0000;
+  border-radius: 5px;
+}
+.average-session-length__title {
+  position: absolute;
+  font-size: 15px;
+  padding: 29px 34px 0 34px;
+  color: rgba(255, 255, 255, 0.5);
+  width: 150px;
+}
+
+.average-session-length-tooltip {
+  background-color: white;
+  width: 39px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.average-session-length-tooltip__value {
+  color: black;
+  font-size: 8px;
+}
+
+.radar-chart {
+  position: relative;
+  width: 30%;
+  height: 263px;
+  background: #282d30;
+  border-radius: 5px;
+}
+
+.recharts-polar-angle-axis-tick:nth-child(1) {
+  transform: translateY(-5px);
+}
+
+.recharts-polar-angle-axis-tick:nth-child(3) {
+  transform: translateY(5px);
+}
+
+.recharts-polar-angle-axis-tick:nth-child(4) {
+  transform: translateY(10px);
+}
+
+.recharts-polar-angle-axis-tick:nth-child(5) {
+  transform: translateY(5px);
+}
+
+@media (max-width: 1439px) {
+  .recharts-polar-angle-axis-tick:nth-child(1) {
+    transform: translateY(-10px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(2) {
+    transform: translateY(-10px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(3) {
+    transform: translate(-8px, 15px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(4) {
+    transform: translateY(15px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(5) {
+    transform: translateY(15px);
+  }
+  .recharts-polar-angle-axis-tick:nth-child(6) {
+    transform: translateY(-10px);
+  }
+}
+.score {
+  position: relative;
+  width: 30%;
+  height: 263px;
+}
+.score__title {
+  position: absolute;
+  left: 30px;
+  top: 24px;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  color: #20253a;
+}
+.score__text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  text-align: center;
+  color: #74798c;
+  background: #fbfbfb;
+}
+.score__text__value {
+  color: #282d30;
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.keydatas {
+  position: absolute;
+  right: 90px;
+  top: 370px;
+}
+@media (max-width: 1439px) {
+  .keydatas {
+    position: relative;
+    right: 0;
+    top: 0;
+    display: flex;
+  }
+}
+.keydatas__card {
+  display: flex;
+  align-items: center;
+  width: 258px;
+  height: 124px;
+  background: #fbfbfb;
+  border-radius: 5px;
+  margin-bottom: 39px;
+}
+@media (max-width: 1439px) {
+  .keydatas__card {
+    margin-bottom: 0;
+  }
+}
+.keydatas__card__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  margin-left: 32px;
+}
+@media (max-width: 1439px) {
+  .keydatas__card__img {
+    margin-left: 0;
+  }
+}
+.keydatas__card__img img {
+  height: 20px;
+}
+.keydatas__card__calories {
+  background-color: rgba(255, 0, 0, 0.07);
+}
+.keydatas__card__proteins {
+  background-color: rgba(74, 184, 255, 0.1);
+}
+.keydatas__card__carbohydrates {
+  background-color: rgba(249, 206, 35, 0.1);
+}
+.keydatas__card__lipids {
+  background-color: rgba(253, 81, 129, 0.1);
+}
+.keydatas__card__infos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.keydatas__card__infos h2 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #282d30;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.keydatas__card__infos p {
+  font-size: 14px;
+  color: #74798c;
+  margin: 0;
+}
+
+.dashboard {
+  margin: 68px 90px 0px 226px;
+}
+@media (max-width: 1439px) {
+  .dashboard {
+    margin: 48px 60px 0px 196px;
+  }
+}
+.dashboard__3-charts {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+@media (max-width: 1439px) {
+  .dashboard__3-charts {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

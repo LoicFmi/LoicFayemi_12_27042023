@@ -12,8 +12,7 @@ export default function Routeur() {
         <Header />
         <Sidebar />
         <Routes>
-          <Route exact path="/" element={<User />} />
-          {/* <Route path="/user/:id/" element={<User />} /> */}
+          <Route path="/user/:id/" element={<User />} />
         </Routes>
       </Router>
     </React.StrictMode>

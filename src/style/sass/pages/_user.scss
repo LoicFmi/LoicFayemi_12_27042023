@@ -1,0 +1,14 @@
+.dashboard {
+  margin: 68px 90px 0px 226px;
+  @include md {
+    margin: 48px 60px 0px 196px;
+  }
+  &__3-charts {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    @include md {
+      width: 100%;
+    }
+  }
+}

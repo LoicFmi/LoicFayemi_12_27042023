@@ -1,0 +1,30 @@
+.score {
+  position: relative;
+  width: 30%;
+  height: 263px;
+  &__title {
+    position: absolute;
+    left: 30px;
+    top: 24px;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    color: #20253a;
+  }
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
+    color: #74798c;
+    background: #fbfbfb;
+    &__value {
+      color: #282d30;
+      font-weight: 700;
+      font-size: 26px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
