@@ -234,20 +234,20 @@ main {
   margin-bottom: 10px;
 }
 
-.keydatas {
+.dashboard__keydatas {
   position: absolute;
   right: 90px;
   top: 370px;
 }
 @media (max-width: 1439px) {
-  .keydatas {
+  .dashboard__keydatas {
     position: relative;
     right: 0;
     top: 0;
     display: flex;
   }
 }
-.keydatas__card {
+.dashboard__keydatas__card {
   display: flex;
   align-items: center;
   width: 258px;
@@ -257,11 +257,11 @@ main {
   margin-bottom: 39px;
 }
 @media (max-width: 1439px) {
-  .keydatas__card {
+  .dashboard__keydatas__card {
     margin-bottom: 0;
   }
 }
-.keydatas__card__img {
+.dashboard__keydatas__card__img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,38 +271,38 @@ main {
   margin-left: 32px;
 }
 @media (max-width: 1439px) {
-  .keydatas__card__img {
+  .dashboard__keydatas__card__img {
     margin-left: 0;
   }
 }
-.keydatas__card__img img {
+.dashboard__keydatas__card__img img {
   height: 20px;
 }
-.keydatas__card__calories {
+.dashboard__keydatas__card__calories {
   background-color: rgba(255, 0, 0, 0.07);
 }
-.keydatas__card__proteins {
+.dashboard__keydatas__card__proteins {
   background-color: rgba(74, 184, 255, 0.1);
 }
-.keydatas__card__carbohydrates {
+.dashboard__keydatas__card__carbohydrates {
   background-color: rgba(249, 206, 35, 0.1);
 }
-.keydatas__card__lipids {
+.dashboard__keydatas__card__lipids {
   background-color: rgba(253, 81, 129, 0.1);
 }
-.keydatas__card__infos {
+.dashboard__keydatas__card__infos {
   display: flex;
   flex-direction: column;
   margin-left: 24px;
 }
-.keydatas__card__infos h2 {
+.dashboard__keydatas__card__infos h2 {
   font-weight: 700;
   font-size: 20px;
   color: #282d30;
   margin: 0;
   margin-bottom: 5px;
 }
-.keydatas__card__infos p {
+.dashboard__keydatas__card__infos p {
   font-size: 14px;
   color: #74798c;
   margin: 0;

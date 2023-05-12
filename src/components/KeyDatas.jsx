@@ -20,38 +20,38 @@ export default function KeyDatas() {
 
   return (
     <React.Fragment>
-      <div className="keydatas__card">
-        <div className="keydatas__card__img keydatas__card__calories">
+      <div className="dashboard__keydatas__card">
+        <div className="dashboard__keydatas__card__img dashboard__keydatas__card__calories">
           <img src={calories} alt="calories" />
         </div>
-        <div className="keydatas__card__infos">
+        <div className="dashboard__keydatas__card__infos">
           <h2>{data.keyData.calorieCount}kCal</h2>
           <p>Calories</p>
         </div>
       </div>
-      <div className="keydatas__card">
-        <div className="keydatas__card__img keydatas__card__proteins">
+      <div className="dashboard__keydatas__card">
+        <div className="dashboard__keydatas__card__img dashboard__keydatas__card__proteins">
           <img src={proteins} alt="proteines" />
         </div>
-        <div className="keydatas__card__infos">
+        <div className="dashboard__keydatas__card__infos">
           <h2>{data.keyData.proteinCount}g</h2>
           <p>Proteines</p>
         </div>
       </div>
-      <div className="keydatas__card">
-        <div className="keydatas__card__img keydatas__card__carbohydrates">
+      <div className="dashboard__keydatas__card">
+        <div className="dashboard__keydatas__card__img dashboard__keydatas__card__carbohydrates">
           <img src={carbohydrates} alt="carbohydrates" />
         </div>
-        <div className="keydatas__card__infos">
+        <div className="dashboard__keydatas__card__infos">
           <h2>{data.keyData.carbohydrateCount}g</h2>
           <p>Glucides</p>
         </div>
       </div>
-      <div className="keydatas__card">
-        <div className="keydatas__card__img keydatas__card__lipids">
+      <div className="dashboard__keydatas__card">
+        <div className="dashboard__keydatas__card__img dashboard__keydatas__card__lipids">
           <img src={lipids} alt="lipids" />
         </div>
-        <div className="keydatas__card__infos">
+        <div className="dashboard__keydatas__card__infos">
           <h2>{data.keyData.lipidCount}g</h2>
           <p>Lipides</p>
         </div>

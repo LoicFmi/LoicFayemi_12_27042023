@@ -1,66 +1,68 @@
-.keydatas {
-  position: absolute;
-  right: 90px;
-  top: 370px;
-  @include md {
-    position: relative;
-    right: 0;
-    top: 0;
-    display: flex;
-  }
-  &__card {
-    display: flex;
-    align-items: center;
-    width: 258px;
-    height: 124px;
-    background: #fbfbfb;
-    border-radius: 5px;
-    margin-bottom: 39px;
+.dashboard {
+  &__keydatas {
+    position: absolute;
+    right: 90px;
+    top: 370px;
     @include md {
-      margin-bottom: 0;
-    }
-    &__img {
+      position: relative;
+      right: 0;
+      top: 0;
       display: flex;
-      justify-content: center;
+    }
+    &__card {
+      display: flex;
       align-items: center;
-      width: 60px;
-      height: 60px;
-      border-radius: 6px;
-      margin-left: 32px;
+      width: 258px;
+      height: 124px;
+      background: #fbfbfb;
+      border-radius: 5px;
+      margin-bottom: 39px;
       @include md {
-        margin-left: 0;
+        margin-bottom: 0;
       }
-      & img {
-        height: 20px;
+      &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 6px;
+        margin-left: 32px;
+        @include md {
+          margin-left: 0;
+        }
+        & img {
+          height: 20px;
+        }
       }
-    }
-    &__calories {
-      background-color: rgba(255, 0, 0, 0.07);
-    }
-    &__proteins {
-      background-color: rgba(74, 184, 255, 0.1);
-    }
-    &__carbohydrates {
-      background-color: rgba(249, 206, 35, 0.1);
-    }
-    &__lipids {
-      background-color: rgba(253, 81, 129, 0.1);
-    }
-    &__infos {
-      display: flex;
-      flex-direction: column;
-      margin-left: 24px;
-      & h2 {
-        font-weight: 700;
-        font-size: 20px;
-        color: #282d30;
-        margin: 0;
-        margin-bottom: 5px;
+      &__calories {
+        background-color: rgba(255, 0, 0, 0.07);
       }
-      & p {
-        font-size: 14px;
-        color: #74798c;
-        margin: 0;
+      &__proteins {
+        background-color: rgba(74, 184, 255, 0.1);
+      }
+      &__carbohydrates {
+        background-color: rgba(249, 206, 35, 0.1);
+      }
+      &__lipids {
+        background-color: rgba(253, 81, 129, 0.1);
+      }
+      &__infos {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+        & h2 {
+          font-weight: 700;
+          font-size: 20px;
+          color: #282d30;
+          margin: 0;
+          margin-bottom: 5px;
+        }
+        & p {
+          font-size: 14px;
+          color: #74798c;
+          margin: 0;
+        }
       }
     }
   }

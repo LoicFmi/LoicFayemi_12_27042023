@@ -19,7 +19,7 @@ export default function User() {
             <Score />
           </div>
         </section>
-        <aside className="keydatas">
+        <aside className="dashboard__keydatas">
           <KeyDatas />
         </aside>
       </main>
