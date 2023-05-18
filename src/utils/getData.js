@@ -1,9 +1,18 @@
+// Get Data from the mocked datas
+// import {
+//   userInfos,
+//   userActivity,
+//   userPerformance,
+//   userAverageSessions
+// } from './mocked_data.js';
+
+// Get Data from the API
 import {
   userInfos,
   userActivity,
   userPerformance,
-  userAverageSessions,
-} from '../mocked_data.js';
+  userAverageSessions
+} from './apiCall.js';
 
 export const getData = async (type, id) => {
   let data = [];
