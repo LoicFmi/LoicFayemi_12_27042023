@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { getData } from '../utils/getData';
+import { getData } from '../utils/userService';
 import { useParams } from 'react-router';
 import {
   BarChart,
@@ -9,10 +9,11 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  ResponsiveContainer,
+  ResponsiveContainer
 } from 'recharts';
 import blackDot from '../assets/svg/black-dot.svg';
 import orangeDot from '../assets/svg/orange-dot.svg';
+import { sessionsModel } from '../utils/dataModels';
 
 export default function DailyActivity() {
   const [data, setData] = useState([]);
@@ -20,7 +21,9 @@ export default function DailyActivity() {
   useEffect(() => {
     const data = async () => {
       const fetch = await getData('USER_ACTIVITY', id);
-      setData(fetch.data.sessions);
+      const userData = fetch.data;
+      const formattedData = sessionsModel.fromApiData(userData);
+      setData(formattedData.sessions);
     };
     data();
   }, [id]);

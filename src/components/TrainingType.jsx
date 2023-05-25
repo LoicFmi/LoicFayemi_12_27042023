@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { getData } from '../utils/getData';
+import { getData } from '../utils/userService';
 import { useParams } from 'react-router';
 import {
   Radar,
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  ResponsiveContainer,
+  ResponsiveContainer
 } from 'recharts';
+import { performanceModel } from '../utils/dataModels';
 
 export default function TrainingType() {
   const [data, setData] = useState([]);
@@ -16,25 +17,28 @@ export default function TrainingType() {
   useEffect(() => {
     const data = async () => {
       const fetch = await getData('USER_PERFORMANCE', id);
-      const formatData = fetch.data.data.map((data) => {
-        switch (data.kind) {
-          case 1:
-            return { ...data, kind: 'Cardio' };
-          case 2:
-            return { ...data, kind: 'Energie' };
-          case 3:
-            return { ...data, kind: 'Endurance' };
-          case 4:
-            return { ...data, kind: 'Force' };
-          case 5:
-            return { ...data, kind: 'Vitesse' };
-          case 6:
-            return { ...data, kind: 'Intensité' };
-          default:
-            return { ...data };
-        }
-      });
-      setData(formatData);
+      const userData = fetch.data;
+      const formattedData = performanceModel
+        .fromApiData(userData)
+        .data.map(data => {
+          switch (data.kind) {
+            case 1:
+              return { ...data, kind: 'Cardio' };
+            case 2:
+              return { ...data, kind: 'Energie' };
+            case 3:
+              return { ...data, kind: 'Endurance' };
+            case 4:
+              return { ...data, kind: 'Force' };
+            case 5:
+              return { ...data, kind: 'Vitesse' };
+            case 6:
+              return { ...data, kind: 'Intensité' };
+            default:
+              return { ...data };
+          }
+        });
+      setData(formattedData);
     };
     data();
   }, [id]);

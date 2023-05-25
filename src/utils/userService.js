@@ -1,4 +1,4 @@
-// Get Data from the mocked datas
+// // Get Data from the mocked datas
 // import {
 //   userInfos,
 //   userActivity,

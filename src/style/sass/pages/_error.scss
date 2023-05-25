@@ -1,0 +1,26 @@
+.notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ff0101;
+  margin-top: 300px;
+  &__404 {
+    margin: auto;
+    color: #ff0101;
+    font-size: 288px;
+    font-weight: 700;
+    @include md {
+      font-size: 220px;
+    }
+  }
+  &__text {
+    margin-top: 66px;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    @include md {
+      margin-top: 30px;
+      font-size: 24px;
+    }
+  }
+}

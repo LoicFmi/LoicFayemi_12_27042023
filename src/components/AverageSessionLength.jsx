@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getData } from '../utils/getData';
+import { getData } from '../utils/userService';
 import { useParams } from 'react-router';
 import {
   ResponsiveContainer,
@@ -7,8 +7,9 @@ import {
   Line,
   XAxis,
   YAxis,
-  Tooltip,
+  Tooltip
 } from 'recharts';
+import { sessionsModel } from '../utils/dataModels';
 
 export default function AverageSessionLength() {
   const [data, setData] = useState([]);
@@ -16,27 +17,30 @@ export default function AverageSessionLength() {
   useEffect(() => {
     const data = async () => {
       const fetch = await getData('USER_AVERAGE_SESSIONS', id);
-      const formatData = fetch.data.sessions.map((data) => {
-        switch (data.day) {
-          case 1:
-            return { ...data, day: 'L' };
-          case 2:
-            return { ...data, day: 'M' };
-          case 3:
-            return { ...data, day: 'M' };
-          case 4:
-            return { ...data, day: 'J' };
-          case 5:
-            return { ...data, day: 'V' };
-          case 6:
-            return { ...data, day: 'S' };
-          case 7:
-            return { ...data, day: 'D' };
-          default:
-            return { ...data };
-        }
-      });
-      setData(formatData);
+      const userData = fetch.data;
+      const formattedData = sessionsModel
+        .fromApiData(userData)
+        .sessions.map(data => {
+          switch (data.day) {
+            case 1:
+              return { ...data, day: 'L' };
+            case 2:
+              return { ...data, day: 'M' };
+            case 3:
+              return { ...data, day: 'M' };
+            case 4:
+              return { ...data, day: 'J' };
+            case 5:
+              return { ...data, day: 'V' };
+            case 6:
+              return { ...data, day: 'S' };
+            case 7:
+              return { ...data, day: 'D' };
+            default:
+              return { ...data };
+          }
+        });
+      setData(formattedData);
     };
     data();
   }, [id]);

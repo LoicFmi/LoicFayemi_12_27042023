@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { getData } from '../utils/getData';
+import { getData } from '../utils/userService';
 import { useParams } from 'react-router';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import { mainDataModel } from '../utils/dataModels';
 
 export default function Score() {
   const [data, setData] = useState([]);
@@ -9,21 +10,18 @@ export default function Score() {
   useEffect(() => {
     const data = async () => {
       const fetch = await getData('USER_MAIN_DATA', id);
-      setData(fetch.data);
+      const userData = fetch.data;
+      const formattedData = mainDataModel.fromApiData(userData);
+      setData(formattedData);
     };
     data();
   }, [id]);
   if (data.length === 0) return null;
   const score = [
     { value: data.todayScore || data.score },
-    { value: 1 - data.todayScore || data.score },
+    { value: 1 - data.todayScore || data.score }
   ];
 
-  console.log(data);
-  console.log(data.todayScore);
-  console.log(data.score);
-  console.log(score);
-  console.log(score[0].value);
   return (
     <div className="score">
       <h2 className="score__title">Score</h2>
