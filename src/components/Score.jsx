@@ -12,15 +12,16 @@ export default function Score() {
       const fetch = await getData('USER_MAIN_DATA', id);
       const userData = fetch.data;
       const formattedData = mainDataModel.fromApiData(userData);
+      if (userData.todayScore == null) {
+        formattedData.todayScore = userData.score;
+      }
       setData(formattedData);
     };
     data();
   }, [id]);
   if (data.length === 0) return null;
-  const score = [
-    { value: data.todayScore || data.score },
-    { value: 1 - data.todayScore || data.score }
-  ];
+  const score = [{ value: data.todayScore }, { value: 1 - data.todayScore }];
+  console.log(score);
 
   return (
     <div className="score">
