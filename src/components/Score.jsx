@@ -21,7 +21,6 @@ export default function Score() {
   }, [id]);
   if (data.length === 0) return null;
   const score = [{ value: data.todayScore }, { value: 1 - data.todayScore }];
-  console.log(score);
 
   return (
     <div className="score">
