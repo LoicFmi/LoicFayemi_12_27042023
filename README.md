@@ -5,10 +5,12 @@
 1. Project
 
    2.1 Prerequisites
+   
    NodeJS
    Npm or Yarn
    
    2.2 Launching the project
+   
    Fork the repository
    Clone it on your computer
    The "npm install" or the "yarn" command will allow you to install the dependencies.
@@ -20,8 +22,10 @@
 2. Endpoint
 
    4.1 Endpoint
+   
    To display the dashboard, you'll need to use the following endpoint :
    http://localhost:3001/user/${userId} - Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.
    
    4.2 Example of query
+   
    http://localhost:3001/user/18 - Retrieves user 18's main information.
